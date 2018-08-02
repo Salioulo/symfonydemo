@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <nav class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:#0099cc;">
+    <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="fa fa-bars color-white"></span>
+                            </button>
+                <img src="{{ asset ('bundles/projetgeneral/images/logo.jpg') }}">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+                    <li class="active"><a href="{{ path ('projet_general_homepage') }}"> Accueil </a></li>
+                    <li class="active"><a href="{{ path ('projet_demande_ajouter') }}"> Faire demande </a></li>
+                    <li class="active"><a href="{{ path ('projet_demande_lister') }}"> Liste demande </a></li>
+                    <li><a href="{{ path ('projet_demande_equipe') }}">Equipe</a></li>
+                    <li><a href="{{ path ('projet_demande_contact') }}">Contact</a></li>
+                    <li><a href="{{ path ('projet_demande_connecter') }}">Connexion</a></li>
+                </ul>
+            </div>
+    </div>
+    </nav>
+ </body>
+</html>
+

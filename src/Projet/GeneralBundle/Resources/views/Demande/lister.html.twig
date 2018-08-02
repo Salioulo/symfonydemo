@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+	<head> 
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="{{ asset ('css/bootstrap.min.css')}}"/> 
+	</head>
+<body> 
+	<div class="container">
+		<div class="well">
+			{% include '::base.html.twig' %}
+			{% block title %}Ajouter{% endblock %}
+		</div>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+	     	<h3 align="center"> Liste des demandes </h3>
+		<table align="center" border="1" width="40%" class="table table-striped table-bordered table-hover">
+		<tr> 
+				<th>N°</th>
+				<th>Domaine</th>
+				<th>Materiel</th>
+				<th>Probl&eacute;me</th>
+				<th>Description</th>
+				<th>Num&eacute;ro</th>
+				<th>Localisation</th>
+				<th colspan="2">D&eacute;tail</th>
+		</tr>
+		{% for dem in demandes %}
+		<tr>
+				<td>{{ dem.Id }}</td>
+				<td>{{ dem.domaine }}</td>
+				<td>{{ dem.typeMateriel}}</td>
+				<td>{{ dem.probleme }}</td>
+				<td>{{ dem.description }}</td>
+				<td>{{ dem.numero }}</td>
+				<td>{{ dem.localisation }}</td>
+				<td><a href="{{ path('projet_demande_affecter', { 'id': dem.id }) }}">Affecter</a></td>
+				<td><a href="{{ path('projet_demande_ignorer', { 'id': dem.id }) }}">Ignorer</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+		    <!-- Footer -->
+<footer class="page-footer font-small blue special-color-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <p> <b>Nos partenaires</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://www.agir.com"> Agir.com</a>
+        </div>
+    </footer>
+  <!-- Footer -->
+	</div>		
+</body>
+</html>

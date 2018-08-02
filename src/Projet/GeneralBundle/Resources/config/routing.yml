@@ -1,0 +1,24 @@
+projet_general_homepage:
+    pattern:  /
+    defaults: { _controller: ProjetGeneralBundle:Default:index }
+projet_demande_ajouter:
+    pattern:  /demande/ajouter
+    defaults: { _controller: ProjetGeneralBundle:Demande:ajouter }
+projet_demande_lister:
+    pattern:  /demande/lister
+    defaults: { _controller: ProjetGeneralBundle:Demande:lister }
+projet_demande_contact:
+    pattern:  /demande/contact
+    defaults: { _controller: ProjetGeneralBundle:Demande:contact }
+projet_demande_equipe:
+    pattern:  /demande/equipe
+    defaults: { _controller: ProjetGeneralBundle:Demande:equipe }
+projet_demande_connecter:
+    pattern:  /demande/connecter
+    defaults: { _controller: ProjetGeneralBundle:Demande:connecter }
+projet_demande_affecter:
+    pattern:  /demande/affecter
+    defaults: { _controller: ProjetGeneralBundle:Demande:affecter }
+projet_demande_ignorer:
+    pattern:  /demande/ignorer
+    defaults: { _controller: ProjetGeneralBundle:Demande:ignorer }
